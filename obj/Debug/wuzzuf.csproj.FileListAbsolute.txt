@@ -1,0 +1,17 @@
+E:\New folder\wuzzuf\bin\Debug\wuzzuf.exe.config
+E:\New folder\wuzzuf\bin\Debug\wuzzuf.exe
+E:\New folder\wuzzuf\bin\Debug\wuzzuf.pdb
+E:\New folder\wuzzuf\bin\Debug\Oracle.DataAccess.dll
+E:\New folder\wuzzuf\obj\Debug\wuzzuf.csproj.AssemblyReference.cache
+E:\New folder\wuzzuf\obj\Debug\wuzzuf.csproj.SuggestedBindingRedirects.cache
+E:\New folder\wuzzuf\obj\Debug\wuzzuf.Properties.Resources.resources
+E:\New folder\wuzzuf\obj\Debug\wuzzuf.RegisterationForm.resources
+E:\New folder\wuzzuf\obj\Debug\wuzzuf.csproj.GenerateResource.cache
+E:\New folder\wuzzuf\obj\Debug\wuzzuf.csproj.CoreCompileInputs.cache
+E:\New folder\wuzzuf\obj\Debug\wuzzuf.csproj.CopyComplete
+E:\New folder\wuzzuf\obj\Debug\wuzzuf.exe
+E:\New folder\wuzzuf\obj\Debug\wuzzuf.pdb
+E:\New folder\Wuzzuf\obj\Debug\wuzzuf.LoginForm.resources
+E:\New folder\Wuzzuf\obj\Debug\wuzzuf.Job_SeekerForm.resources
+E:\New folder\Wuzzuf\obj\Debug\wuzzuf.MainForm.resources
+E:\New folder\Wuzzuf\obj\Debug\wuzzuf.ApplicationsForm.resources
