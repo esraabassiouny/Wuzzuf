@@ -24,7 +24,7 @@ namespace wuzzuf
             _seeker_id = seeker_id;
         }
 
-        private void ApplicationsForm_Load(object sender, EventArgs e)
+        private void ApplicationsForm_Load_1(object sender, EventArgs e)
         {
             try
             {
@@ -105,7 +105,7 @@ namespace wuzzuf
             btnNext.Enabled = _currentApplicationIndex < _applications.Count - 1;
         }
 
-        private void btnPrev_Click_1(object sender, EventArgs e)
+        private void btnPrev_Click(object sender, EventArgs e)
         {
             if (_currentApplicationIndex > 0)
             {
@@ -113,7 +113,7 @@ namespace wuzzuf
                 ShowCurrentApplication();
             }
         }
-        private void btnNext_Click_1(object sender, EventArgs e)
+        private void btnNext_Click(object sender, EventArgs e)
         {
             if (_currentApplicationIndex < _applications.Count - 1)
             {

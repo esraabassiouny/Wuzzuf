@@ -21,19 +21,19 @@ namespace wuzzuf
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
             conn = new OracleConnection(ordb);
             conn.Open();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             RegisterationForm newForm = new RegisterationForm(this.conn);
             newForm.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
             LoginForm newForm = new LoginForm(this.conn);
             newForm.Show();

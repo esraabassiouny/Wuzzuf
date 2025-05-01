@@ -20,7 +20,7 @@ namespace wuzzuf
             InitializeComponent();
             _conn = connection;
         }
-        private void buttonLogin_Click(object sender, EventArgs e)
+        private void buttonLogin_Click_1(object sender, EventArgs e)
         {
             // check email and password 
             string email = textBoxEmail.Text;
@@ -65,5 +65,6 @@ namespace wuzzuf
         {
             //_conn.Dispose();
         }
+
     }
 }

@@ -15,3 +15,4 @@ E:\New folder\Wuzzuf\obj\Debug\wuzzuf.LoginForm.resources
 E:\New folder\Wuzzuf\obj\Debug\wuzzuf.Job_SeekerForm.resources
 E:\New folder\Wuzzuf\obj\Debug\wuzzuf.MainForm.resources
 E:\New folder\Wuzzuf\obj\Debug\wuzzuf.ApplicationsForm.resources
+E:\New folder\Wuzzuf\obj\Debug\wuzzuf.EmployerForm.resources

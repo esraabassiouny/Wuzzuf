@@ -22,11 +22,7 @@ namespace wuzzuf
             InitializeComponent();
             this._conn = connection;        }
 
-        private void RegisterationForm_Load(object sender, EventArgs e)
-        {
-           
-        }
-        private void btnBrowseImage_Click(object sender, EventArgs e)
+        private void btnBrowseImage_Click_1(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
@@ -41,7 +37,7 @@ namespace wuzzuf
             }
         }
 
-        private void btnSubmit_Click(object sender, EventArgs e)
+        private void btnSubmit_Click_1(object sender, EventArgs e)
         {
 
             string firstName = txtFirstName.Text.Trim();

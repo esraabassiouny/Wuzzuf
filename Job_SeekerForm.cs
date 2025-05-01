@@ -26,7 +26,7 @@ namespace wuzzuf
             _seeker_id = seeker_id;
         }
 
-        private void Job_SeekerForm_Load(object sender, EventArgs e)
+        private void Job_SeekerForm_Load_1(object sender, EventArgs e)
         {
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = _conn;
@@ -93,7 +93,7 @@ namespace wuzzuf
                 }
             }
         }
-        private void nextButton_Click(object sender, EventArgs e)
+        private void nextButton_Click_1(object sender, EventArgs e)
         {
             if (currentJobIndex < jobsList.Count - 1)
             {
@@ -102,7 +102,7 @@ namespace wuzzuf
             }
         }
 
-        private void prevButton_Click(object sender, EventArgs e)
+        private void prevButton_Click_1(object sender, EventArgs e)
         {
             if (currentJobIndex > 0)
             {
@@ -111,7 +111,7 @@ namespace wuzzuf
             }
         }
 
-        private void applyButton_Click(object sender, EventArgs e)
+        private void applyButton_Click_1(object sender, EventArgs e)
         {
             // Get the next application ID
             decimal max_id, app_id;
@@ -200,7 +200,7 @@ namespace wuzzuf
 
         }
 
-        private void apply_allbutton_Click(object sender, EventArgs e)
+        private void apply_allbutton_Click_1(object sender, EventArgs e)
         {
             decimal max_id, app_id;
             OracleCommand cmd = new OracleCommand();
@@ -293,11 +293,6 @@ namespace wuzzuf
                 MessageBox.Show($"Error applying to jobs: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-        }
-
-        private void Job_SeekerForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            //_conn.Dispose();
         }
 
         private void applicationsbutton_Click(object sender, EventArgs e)
