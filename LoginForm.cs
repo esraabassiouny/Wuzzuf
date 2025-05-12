@@ -42,15 +42,15 @@ namespace wuzzuf
             {
                 MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 string userType = dr["user_type"].ToString();
-                string seeker_id = dr["user_ID"].ToString();
+                string id = dr["user_ID"].ToString();
                 if (userType == "job_seeker")
                 {
-                    Job_SeekerForm newForm = new Job_SeekerForm(this._conn, seeker_id);
+                    Job_SeekerForm newForm = new Job_SeekerForm(this._conn, id);
                     newForm.Show();
                 }
-                else
+                else if(userType == "employer")
                 {
-                    EmployerForm newForm = new EmployerForm();
+                    EmployerForm newForm = new EmployerForm(id);
                     newForm.Show();
                 }
             }
@@ -66,5 +66,9 @@ namespace wuzzuf
             //_conn.Dispose();
         }
 
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

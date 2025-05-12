@@ -1,0 +1,297 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|c:\\users\\ziadk\\downloads\\wuzzuf\\wuzzuf\\employerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|solutionrelative:employerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\employerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|solutionrelative:employerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\applicationsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|solutionrelative:applicationsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\applicationsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|solutionrelative:applicationsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\applicationsform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|solutionrelative:applicationsform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\employerform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|solutionrelative:employerform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\job_seekerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|solutionrelative:job_seekerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\job_seekerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|solutionrelative:job_seekerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\job_seekerform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|solutionrelative:job_seekerform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\registerationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|solutionrelative:registerationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\registerationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|solutionrelative:registerationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\registerationform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|solutionrelative:registerationform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|solutionrelative:loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{630F3442-E2AD-460A-83EB-7754B458EB5E}|wuzzuf.csproj|solutionrelative:mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\MainForm.cs",
+              "RelativeToolTip": "MainForm.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAlwCcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2025-05-01T11:36:13.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmployerForm.cs",
+              "DocumentMoniker": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\EmployerForm.cs",
+              "RelativeDocumentMoniker": "EmployerForm.cs",
+              "ToolTip": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\EmployerForm.cs",
+              "RelativeToolTip": "EmployerForm.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAqwCEAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T11:36:13.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmployerForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\EmployerForm.cs",
+              "RelativeDocumentMoniker": "EmployerForm.cs",
+              "ToolTip": "E:\\New folder\\wuzzuf\\EmployerForm.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2025-05-01T11:36:13.426Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EmployerForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\EmployerForm.Designer.cs",
+              "RelativeDocumentMoniker": "EmployerForm.Designer.cs",
+              "ToolTip": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\EmployerForm.Designer.cs",
+              "RelativeToolTip": "EmployerForm.Designer.cs",
+              "ViewState": "AQIAAIEAAAAAAAAAAAAwwJ0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001384|",
+              "WhenOpened": "2025-05-01T11:36:13.427Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MainForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\MainForm.Designer.cs",
+              "RelativeDocumentMoniker": "MainForm.Designer.cs",
+              "ToolTip": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\MainForm.Designer.cs",
+              "RelativeToolTip": "MainForm.Designer.cs",
+              "ViewState": "AQIAADUAAAAAAAAAAAAYwBkAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001384|",
+              "WhenOpened": "2025-05-01T11:36:13.428Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Job_SeekerForm.cs",
+              "DocumentMoniker": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\Job_SeekerForm.cs",
+              "RelativeDocumentMoniker": "Job_SeekerForm.cs",
+              "ToolTip": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\Job_SeekerForm.cs",
+              "RelativeToolTip": "Job_SeekerForm.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkBAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2025-05-01T11:36:13.429Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationsForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\ApplicationsForm.Designer.cs",
+              "RelativeDocumentMoniker": "ApplicationsForm.Designer.cs",
+              "ToolTip": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\ApplicationsForm.Designer.cs",
+              "RelativeToolTip": "ApplicationsForm.Designer.cs",
+              "ViewState": "AQIAADQBAAAAAAAAAAAwwFABAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001384|",
+              "WhenOpened": "2025-05-01T11:36:13.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApplicationsForm.cs",
+              "DocumentMoniker": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\ApplicationsForm.cs",
+              "RelativeDocumentMoniker": "ApplicationsForm.cs",
+              "ToolTip": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\ApplicationsForm.cs",
+              "RelativeToolTip": "ApplicationsForm.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwBUAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2025-05-01T11:36:13.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ApplicationsForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\ApplicationsForm.cs",
+              "RelativeDocumentMoniker": "ApplicationsForm.cs",
+              "ToolTip": "E:\\New folder\\wuzzuf\\ApplicationsForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2025-05-01T11:36:13.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Job_SeekerForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\Job_SeekerForm.Designer.cs",
+              "RelativeDocumentMoniker": "Job_SeekerForm.Designer.cs",
+              "ToolTip": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\Job_SeekerForm.Designer.cs",
+              "RelativeToolTip": "Job_SeekerForm.Designer.cs",
+              "ViewState": "AQIAAA8BAAAAAAAAAIAwwB0BAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001384|",
+              "WhenOpened": "2025-05-01T11:36:13.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Job_SeekerForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\Job_SeekerForm.cs",
+              "RelativeDocumentMoniker": "Job_SeekerForm.cs",
+              "ToolTip": "E:\\New folder\\wuzzuf\\Job_SeekerForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2025-05-01T11:36:13.433Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "LoginForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\LoginForm.Designer.cs",
+              "RelativeDocumentMoniker": "LoginForm.Designer.cs",
+              "ToolTip": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\LoginForm.Designer.cs",
+              "RelativeToolTip": "LoginForm.Designer.cs",
+              "ViewState": "AQIAAHEAAAAAAAAAAIAwwH4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001384|",
+              "WhenOpened": "2025-05-01T11:36:13.434Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\LoginForm.cs",
+              "RelativeDocumentMoniker": "LoginForm.cs",
+              "ToolTip": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\LoginForm.cs",
+              "RelativeToolTip": "LoginForm.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAgwBMAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2025-05-01T11:36:13.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\LoginForm.cs",
+              "RelativeDocumentMoniker": "LoginForm.cs",
+              "ToolTip": "E:\\New folder\\wuzzuf\\LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2025-05-01T11:36:13.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RegisterationForm.cs",
+              "DocumentMoniker": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\RegisterationForm.cs",
+              "RelativeDocumentMoniker": "RegisterationForm.cs",
+              "ToolTip": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\RegisterationForm.cs",
+              "RelativeToolTip": "RegisterationForm.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAAwC0AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2025-05-01T11:36:13.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RegisterationForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\RegisterationForm.Designer.cs",
+              "RelativeDocumentMoniker": "RegisterationForm.Designer.cs",
+              "ToolTip": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\RegisterationForm.Designer.cs",
+              "RelativeToolTip": "RegisterationForm.Designer.cs",
+              "ViewState": "AQIAAAQBAAAAAAAAAIAwwBEBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001384|",
+              "WhenOpened": "2025-05-01T11:36:13.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RegisterationForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\RegisterationForm.cs",
+              "RelativeDocumentMoniker": "RegisterationForm.cs",
+              "ToolTip": "E:\\New folder\\wuzzuf\\RegisterationForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2025-05-01T11:36:13.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ziadk\\Downloads\\wuzzuf\\wuzzuf\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "E:\\New folder\\wuzzuf\\MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2025-05-01T11:36:13.439Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

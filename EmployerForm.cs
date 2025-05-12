@@ -18,61 +18,31 @@ namespace wuzzuf
         OracleDataAdapter adapter;
         OracleCommandBuilder builder;
         DataSet ds;
-
-        public EmployerForm()
+        string employer_id;
+        public EmployerForm(string id)
         {
             InitializeComponent();
+            employer_id = id;
         }
         private void EmployerForm_Load_1(object sender, EventArgs e)
         {
             string conStr = "data source = orcl; user id = scott; password = tiger;";
-            string cmdStr = "SELECT DISTINCT title FROM jobs";
+            string cmdStr = @"SELECT DISTINCT j.title 
+                     FROM jobs j
+                     JOIN employers e ON j.employer_id = e.employer_id
+                     WHERE e.employer_id = :employer_id";
             adapter = new OracleDataAdapter(cmdStr, conStr);
+            adapter.SelectCommand.Parameters.Add("employer_id", OracleDbType.Decimal).Value = decimal.Parse(employer_id);
             ds = new DataSet();
             adapter.Fill(ds, "jobs");
             dataGridView2.DataSource = ds.Tables["jobs"];
-            //dataGridView2.Columns["job_id"].Visible = false;
         }
 
-
-        //private void dataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    string jobTitle = dataGridView2.Rows[e.RowIndex].Cells["title"].Value.ToString();
-        //    //string conStr = "data source = orcl; user id = scott; password = tiger;";
-        //    //string cmdStr = "select job_id from jobs where job_title = :jobTitle";
-        //    //adapter = new OracleDataAdapter(cmdStr, conStr);
-        //    string conStr = "data source = orcl; user id = scott; password = tiger;";
-        //    string cmdStr = @"select APPLICATION_ID, first_name, last_name, years_of_experience, highest_education_level, skills, 
-        //                    application_date, status from applications, jobs, users, job_seekers where applications.job_id
-        //                    = jobs.job_id and applications.seeker_id = users.user_id and job_seekers.seeker_id  = applications.seeker_id and jobs.title =:jobTitle";
-        //    adapter = new OracleDataAdapter(cmdStr, conStr);
-        //    adapter.SelectCommand.Parameters.Add("jobTitle", jobTitle);
-        //    ds = new DataSet();
-        //    adapter.Fill(ds);
-        //    dataGridView1.DataSource = ds.Tables[0];
-        //}
-        //private void dataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    int jobId = Convert.ToInt32(dataGridView2.Rows[e.RowIndex].Cells["job_id"].Value);
-
-        //    string conStr = "data source = orcl; user id = scott; password = tiger;";
-        //    string cmdStr = "SELECT * FROM applications WHERE job_id = :jobId";
-
-        //    adapter = new OracleDataAdapter(cmdStr, conStr);
-        //    adapter.SelectCommand.Parameters.Add("jobId", jobId);
-
-        //    builder = new OracleCommandBuilder(adapter); // needed for save
-
-        //    ds = new DataSet();
-        //    adapter.Fill(ds, "applications");
-        //    dataGridView1.DataSource = ds.Tables["applications"];
-        //}
 
         private void dataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             
             ds.Tables.Clear();
-            //dataGridView1.ClearSelection();
             string jobTitle = dataGridView2.Rows[e.RowIndex].Cells["title"].Value.ToString();
             string conStr = "data source = orcl; user id = scott; password = tiger;";
 
@@ -82,10 +52,13 @@ namespace wuzzuf
                                     JOIN jobs j ON a.job_id = j.job_id
                                     JOIN users u ON a.seeker_id = u.user_id
                                     JOIN job_seekers js ON js.seeker_id = a.seeker_id
-                                    WHERE j.title = :jobTitle";
+                                    JOIN employers e ON j.employer_id = e.employer_id
+                                    WHERE j.title = :jobTitle
+                                    AND e.employer_id = :employer_id";
 
             OracleDataAdapter displayAdapter = new OracleDataAdapter(displayQuery, conStr);
             displayAdapter.SelectCommand.Parameters.Add("jobTitle", jobTitle);
+            displayAdapter.SelectCommand.Parameters.Add("employer_id", OracleDbType.Decimal).Value = decimal.Parse(employer_id);
             displayAdapter.Fill(ds, "display");
 
             dataGridView1.DataSource = ds.Tables["display"];
@@ -93,7 +66,8 @@ namespace wuzzuf
             foreach (DataGridViewColumn col in dataGridView1.Columns)
                 col.ReadOnly = col.Name != "STATUS";
 
-            string appQuery = "SELECT * FROM applications WHERE job_id = (SELECT job_id FROM jobs WHERE title = :jobTitle)";
+            string appQuery = @"SELECT * FROM applications WHERE job_id IN (SELECT job_id FROM jobs 
+                              WHERE title = :jobTitle)"; 
             adapter = new OracleDataAdapter(appQuery, conStr);
             adapter.SelectCommand.Parameters.Add("jobTitle", jobTitle);
             builder = new OracleCommandBuilder(adapter);
@@ -111,8 +85,16 @@ namespace wuzzuf
                     appRows[0]["status"] = newStatus;
             }
 
-            adapter.Update(ds.Tables["applications"]);
-            MessageBox.Show("Changes saved successfully.");
+            try
+            {
+                adapter.Update(ds.Tables["applications"]);
+                MessageBox.Show("Changes saved successfully.");
+            }
+            catch
+            {
+                MessageBox.Show("Status must be choosen from ('submitted', 'under_review', 'shortlisted', 'rejected', 'hired')");
+
+            }
         }
 
     }

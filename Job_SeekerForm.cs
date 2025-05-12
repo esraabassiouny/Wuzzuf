@@ -113,7 +113,21 @@ namespace wuzzuf
 
         private void applyButton_Click_1(object sender, EventArgs e)
         {
-            // Get the next application ID
+            var currentJob = jobsList[currentJobIndex];
+
+            OracleCommand checkCmd = new OracleCommand();
+            checkCmd.Connection = _conn;
+            checkCmd.CommandText = "SELECT COUNT(*) FROM applications WHERE job_id = :job_id AND seeker_id = :seeker_id";
+            checkCmd.Parameters.Add(":job_id", OracleDbType.Varchar2).Value = currentJob["job_id"];
+            checkCmd.Parameters.Add(":seeker_id", OracleDbType.Varchar2).Value = _seeker_id;
+
+            int existingApplications = Convert.ToInt32(checkCmd.ExecuteScalar());
+
+            if (existingApplications > 0)
+            {
+                MessageBox.Show("You have already applied to this job.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             decimal max_id, app_id;
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = _conn;
@@ -131,8 +145,6 @@ namespace wuzzuf
             {
                 app_id = 1;
             }
-
-            var currentJob = jobsList[currentJobIndex];
 
             try
             {
@@ -154,7 +166,6 @@ namespace wuzzuf
 
                 if (rowsAffected > 0)
                 {
-                    // 2. Update application count in jobs table
                     OracleCommand updateCmd = new OracleCommand();
                     updateCmd.Connection = _conn;
                     updateCmd.CommandText = @"UPDATE jobs 
@@ -163,7 +174,6 @@ namespace wuzzuf
                     updateCmd.Parameters.Add(":job_id", OracleDbType.Decimal).Value = currentJob["job_id"];
                     int r = updateCmd.ExecuteNonQuery();
 
-                    // Get the updated application count
                     OracleCommand countCmd = new OracleCommand();
                     countCmd.Connection = _conn;
                     countCmd.CommandText = "GetAppCount";
@@ -220,11 +230,23 @@ namespace wuzzuf
                 app_id = 1;
             }
 
+            OracleCommand checkCmd = new OracleCommand();
+            checkCmd.Connection = _conn;
+            checkCmd.CommandText = "SELECT COUNT(*) FROM applications WHERE job_id = :job_id AND seeker_id = :seeker_id";
+
+            OracleParameter jobIdParamCheck = new OracleParameter(":job_id", OracleDbType.Varchar2);
+            OracleParameter seekerIdParamCheck = new OracleParameter(":seeker_id", OracleDbType.Varchar2);
+
+            checkCmd.Parameters.Add(jobIdParamCheck);
+            checkCmd.Parameters.Add(seekerIdParamCheck);
+
+            seekerIdParamCheck.Value = _seeker_id;
+
             OracleCommand insertCmd = new OracleCommand();
             insertCmd.Connection = _conn;
             insertCmd.CommandText = @"INSERT INTO applications 
-                            (application_id, job_id, seeker_id, application_date, status) 
-                            VALUES (:app_id, :job_id, :seeker_id, :app_date, 'submitted')";
+                    (application_id, job_id, seeker_id, application_date, status) 
+                    VALUES (:app_id, :job_id, :seeker_id, :app_date, 'submitted')";
 
             OracleParameter appIdParam = new OracleParameter(":app_id", OracleDbType.Decimal);
             OracleParameter jobIdParam = new OracleParameter(":job_id", OracleDbType.Varchar2);
@@ -232,23 +254,19 @@ namespace wuzzuf
 
             insertCmd.Parameters.Add(appIdParam);
             insertCmd.Parameters.Add(jobIdParam);
-
             insertCmd.Parameters.Add(":seeker_id", OracleDbType.Varchar2).Value = _seeker_id;
 
             OracleParameter dateParam = new OracleParameter(":app_date", OracleDbType.TimeStamp);
             dateParam.Value = DateTime.Now;
             insertCmd.Parameters.Add(dateParam);
 
-            // 2. Update application count in jobs table
             OracleCommand updateCmd = new OracleCommand();
             updateCmd.Connection = _conn;
             updateCmd.CommandText = @"UPDATE jobs 
-                                           SET APPLICATION_COUNT = APPLICATION_COUNT + 1 
-                                           WHERE job_id = :job_id";
-
+                                   SET APPLICATION_COUNT = APPLICATION_COUNT + 1 
+                                   WHERE job_id = :job_id";
             updateCmd.Parameters.Add(jobIdParam1);
 
-            // Get the updated application count
             OracleCommand countCmd = new OracleCommand();
             countCmd.Connection = _conn;
             countCmd.CommandText = "GetAppCount";
@@ -259,46 +277,93 @@ namespace wuzzuf
             outputParam.Direction = ParameterDirection.Output;
             countCmd.Parameters.Add(outputParam);
 
-            decimal [] applicationCount = new decimal[jobsList.Count];
-            int index = 0;
-            try
+            List<decimal> applicationCounts = new List<decimal>();
+            int successfulApplications = 0;
+
+            foreach (var job in jobsList)
             {
-                foreach (var job in jobsList)
+                // Check if already applied
+                jobIdParamCheck.Value = job["job_id"];
+                int existingApplications = Convert.ToInt32(checkCmd.ExecuteScalar());
+
+                if (existingApplications > 0)
+                {
+                    continue; // Skip this job as it's already applied for
+                }
+
+                try
                 {
                     appIdParam.Value = app_id++;
                     jobIdParam.Value = job["job_id"];
                     jobIdParam1.Value = job["job_id"];
 
                     insertCmd.ExecuteNonQuery();
-                    
                     updateCmd.ExecuteNonQuery();
 
                     countCmd.Parameters["p_job_id"].Value = job["job_id"];
-
                     countCmd.ExecuteNonQuery();
-                    applicationCount[index] = Convert.ToDecimal(outputParam.Value.ToString());
-                    index++;
-
+                    applicationCounts.Add(Convert.ToDecimal(outputParam.Value.ToString()));
+                    successfulApplications++;
                 }
-                var message = $"Successfully applied to {jobsList.Count} jobs!\n\n";
-                for (int i = 0; i < jobsList.Count; i++)
+                catch (Exception ex)
                 {
-                    message += $"Job{i + 1} application count: {applicationCount[i]}\n";
+                    continue;
+                }
+            }
+
+            if (successfulApplications > 0)
+            {
+                var message = $"Successfully applied to {successfulApplications} out of {jobsList.Count} jobs!\n\n";
+                for (int i = 0; i < applicationCounts.Count; i++)
+                {
+                    message += $"Job {i + 1} application count: {applicationCounts[i]}\n";
                 }
 
                 MessageBox.Show(message, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"Error applying to jobs: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("You have already applied to all these jobs or no new jobs were available.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
         }
 
         private void applicationsbutton_Click(object sender, EventArgs e)
         {
-            ApplicationsForm newForm = new ApplicationsForm(_conn,_seeker_id);
-            newForm.Show();
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = _conn;
+            cmd.CommandText = "getApplicationsBySeeker";
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add("seekerID", OracleDbType.Int32).Value = _seeker_id;
+
+            OracleParameter applicationsCursor = new OracleParameter();
+            applicationsCursor.ParameterName = "applications";
+            applicationsCursor.OracleDbType = OracleDbType.RefCursor;
+            applicationsCursor.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(applicationsCursor);
+
+            OracleDataReader reader = null;
+            try
+            {
+                reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    ApplicationsForm newForm = new ApplicationsForm(_conn, _seeker_id);
+                    newForm.Show();
+                }
+                else
+                {
+
+                    MessageBox.Show("No applications found for this user.", "Information",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading applications: " + ex.Message, "Error",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
